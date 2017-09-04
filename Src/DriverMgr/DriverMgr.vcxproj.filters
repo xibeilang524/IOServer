@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Expression">
+      <UniqueIdentifier>{2b143bef-16c1-425b-828d-a7b45613474a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asyntcp">
+      <UniqueIdentifier>{3ecf2ea4-ad91-4d17-8753-959690758da4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="DriverMgr.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="res\DriverMgr.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DriverMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TagItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdk\sdktool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drvwap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DrvItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Expression\ExpressionEngine.cpp">
+      <Filter>Expression</Filter>
+    </ClCompile>
+    <ClCompile Include="Expression\ExpressionTagNameParser.cpp">
+      <Filter>Expression</Filter>
+    </ClCompile>
+    <ClCompile Include="TagVal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tool\SpinLock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DecVal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DecValMan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dec2TagVal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamMessageQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DbpConArgs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSConnect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteDDS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HeartThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HeartServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HeartClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cashe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DdsTagTab.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="asyntcp\asyntcp.cpp">
+      <Filter>asyntcp</Filter>
+    </ClCompile>
+    <ClCompile Include="pagefile\pagefile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SOEBUF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DriverMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TagItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sdk\sdktool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="drvwap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DrvItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Expression\ExpressionEngine.h">
+      <Filter>Expression</Filter>
+    </ClInclude>
+    <ClInclude Include="Expression\ExpressionTagNameParser.h">
+      <Filter>Expression</Filter>
+    </ClInclude>
+    <ClInclude Include="TagVal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\frmtool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tool\SpinLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DecVal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DecValMan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dec2TagVal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamMessageQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\global\Define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DbpConArgs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSConnect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteDDS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HeartThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HeartServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HeartClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cashe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DdsTagTab.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="asyntcp\asyntcp.h">
+      <Filter>asyntcp</Filter>
+    </ClInclude>
+    <ClInclude Include="pagefile\pagefile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DriverMgr_global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SOEBUF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DriverMgr.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

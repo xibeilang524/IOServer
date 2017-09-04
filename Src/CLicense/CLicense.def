@@ -1,0 +1,17 @@
+LIBRARY	"CLicense"
+
+EXPORTS
+	kimi_lic_load					@1 NONAME
+	kimi_lic_memory_load			@2 NONAME
+	kimi_lic_free					@3 NONAME
+	kimi_lic_get_property_count		@4 NONAME
+	kimi_lic_get_property_name		@5 NONAME
+	kimi_lic_get_property_info		@6 NONAME
+	kimi_lic_get_auth_info			@7 NONAME
+	kimi_lic_get_uername			@8 NONAME
+	kimi_lic_get_bool				@9 NONAME
+	kimi_lic_get_long				@10 NONAME
+	kimi_lic_get_double				@11 NONAME
+	kimi_lic_get_string				@12 NONAME
+	kimi_lic_get_machine_code		@13 NONAME
+	kimi_lic_load_mask				@14 NONAME

@@ -1,0 +1,276 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Operator.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "Operator DLL"
+            VALUE "FileVersion", "2, 0, 0, 1"
+            VALUE "InternalName", "Operator"
+            VALUE "LegalCopyright", "版权所有 (C) 2009"
+            VALUE "OriginalFilename", "Operator.DLL"
+            VALUE "PrivateBuild", "20120321"
+            VALUE "ProductName", "Operator Dynamic Link Library"
+            VALUE "ProductVersion", "2, 0, 0, 1"
+            VALUE "SpecialBuild", "20120321"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_OPT DIALOG  0, 0, 283, 123
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "添加操作员"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "账号:",IDC_STATIC,7,7,21,8
+    EDITTEXT        IDC_EDIT_NAME,7,19,88,14,ES_AUTOHSCROLL
+    LTEXT           "角色:",IDC_STATIC,111,7,21,8
+    COMBOBOX        IDC_COMBO_GROUP,111,19,87,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "初始密码:",IDC_STATIC,7,51,37,8
+    EDITTEXT        IDC_EDIT_PASS1,7,63,87,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "验证初始密码:",IDC_STATIC,113,51,53,8
+    EDITTEXT        IDC_EDIT_PASS2,113,63,87,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "状态:",IDC_STATIC,7,91,21,8
+    CONTROL         "启用(选中表示账号有效，否则禁用账号)",IDC_CHECK_USE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,106,171,10
+    DEFPUSHBUTTON   "确定",IDOK,226,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,226,24,50,14
+END
+
+IDD_DIALOG_OPTMAN DIALOG  0, 0, 349, 231
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "账号管理"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_OPT,"SysListView32",LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,0,0,285,231
+    PUSHBUTTON      "添加 (&A)",IDC_BUTTON_ADD,292,5,50,14
+    PUSHBUTTON      "修改 (&E)",IDC_BUTTON_EDIT,292,29,50,14
+    PUSHBUTTON      "删除 (&D)",IDC_BUTTON_DEL,292,51,50,14
+END
+
+IDD_DIALOG_LOGIN DIALOG  0, 0, 187, 106
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "登录"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDI_ICON_KEY,IDC_STATIC,7,7,21,21,SS_REALSIZEIMAGE
+    LTEXT           "账号:",IDC_STATIC,45,27,21,8
+    EDITTEXT        IDC_EDIT_NAME,77,23,63,14,ES_AUTOHSCROLL
+    LTEXT           "密码:",IDC_STATIC,45,52,21,8
+    EDITTEXT        IDC_EDIT_PASS,77,49,63,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,29,74,50,14
+    PUSHBUTTON      "取消",IDCANCEL,105,74,50,14
+END
+
+IDD_DIALOG_EDITPASS DIALOG  0, 0, 187, 145
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改密码"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "账号:",IDC_STATIC,7,7,21,8
+    EDITTEXT        IDC_EDIT_NAME,7,16,90,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "旧密码:",IDC_STATIC,7,41,29,8
+    EDITTEXT        IDC_EDIT_PASS,7,52,90,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "新密码:",IDC_STATIC,7,77,29,8
+    EDITTEXT        IDC_EDIT_NEWPASS1,7,88,90,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "验证新密码:",IDC_STATIC,7,113,45,8
+    EDITTEXT        IDC_EDIT_NEWPASS2,7,124,90,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,130,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,24,50,14
+    ICON            IDI_ICON_KEY,IDC_STATIC,149,111,21,21
+END
+
+IDD_DIALOG_LICENSE DIALOGEX 0, 0, 251, 203
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "软件授权提示"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭（10秒后关闭窗口）",IDOK,150,182,94,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,125,172,126,1
+    LTEXT           "    请查看以下的软件授权信息，如果软件未获得授权或者授权已经过期，则将无法继续使用该软件。\n\n    如果软件即将过期，请及时联系我们以获得新的授权，以免由于软件授权过期造成无法使用或数据丢失，我们将不会为此承担任何法律责任！",IDC_STATIC,19,10,212,50
+    LTEXT           "西安热工研究院有限公司 版权所有",IDC_STATIC_COPYRIGHT,7,168,116,8,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "拷贝机器码到粘贴板",IDC_BUTTON_COPY,64,182,80,14
+    CONTROL         "",IDC_LIST_INFO,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,21,65,209,95
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_OPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_DIALOG_OPTMAN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 342
+    END
+
+    IDD_DIALOG_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_DIALOG_EDITPASS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_DIALOG_LICENSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_KEY            ICON                    "key1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Operator.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

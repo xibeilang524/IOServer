@@ -1,0 +1,8 @@
+F701Drv,,,,,
+ID,标签名,描述,单位,类型,备注
+ID_0019_JZ,CP_0019_JZ,轻纸袋1#称净重,kg,float32,
+ID_0019_CNT,CP_0019_CNT,轻纸袋1#称袋数,d,int32,
+ID_0019_SD,CP_0019_SD,轻纸袋1#称设定值,kg,float32,
+ID_0020_JZ,CP_0020_JZ,轻纸袋2#称净重,kg,float32,
+ID_0020_CNT,CP_0020_CNT,轻纸袋2#称袋数,d,int32,
+ID_0020_SD,CP_0020_SD,轻纸袋2#称设定值,kg,float32,

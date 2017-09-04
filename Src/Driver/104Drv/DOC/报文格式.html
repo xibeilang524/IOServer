@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.STYLE2 {
+	font-size: 14px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<p><a><strong>应用规约数据单元（APDU）的定义</strong></a></p>
+<p><strong>1.</strong><a><strong>基本报文格式</strong></a></p>
+<p class="STYLE2">1.1<a> APDU的组成</a> </p>
+<p>传输接口（TCP到用户） 是一个定向流接口，它没有为IEC 60870-5-101中的ASDU定义任何启动或者停止机制。为了检出ASDU的启动和结束，每个APCI包括下列的定界元素：一个启动字符，ASDU的规定长度，以及控制域（见图4）。可以传送一个完整的APDU（或者，出于控制目的，仅仅是APCI域也是可以被传送的）（见图5）。</p>
+<p><img src="20110627101026.jpg" width="461" height="646" /></p>
+<p><span class="STYLE2">1.2<a> APCI</a>的含义</span> </p>
+<p>启动字符 68H     定义了数据流中的起点。</p>
+<p>APDU的长度域     定义了APDU体的长度，它包括APCI的四个控制域八位位组和ASDU。第一个被计数的八位位组是控制域的第一个八位位组，最后一个被计数的八位位组是ASDU的最后一个八位位组。ASDU的最大长度限制在249以内，因为APDU域的最大长度是253（APDU最大值=255减去启动和长度八位位组），控制域的长度是4个八位位组。</p>
+<p>控制域           定义了保护报文不至丢失和重复传送的控制信息，报文传输启动/停止，以及传输连接的监视等。控制域的计数器机制是根据ITU-T X.25 标准中推荐的2.3.2.2.1 至2.3.2.2.5来定义的。 </p>
+<p>图6，7，8为控制域的定义。</p>
+<p><strong>2.</strong><a><strong>三种类型报文格式的控制域定义</strong></a><a></a> </p>
+<p align="left">编号的信息传输格式（Information Transmit Format），      简称I－格式 <br />
+  编号的监视功能格式（Numbered  supervisory functions）， 简称S－格式 <br />
+  不编号的控制功能格式（Unnumbered  control function）,    简称U－格式 </p>
+<p><span class="STYLE2">2.1<a> APDU的组成</a></span></p>
+<p class="STYLE2"><a><strong>I 格式（Information  Transmit Format）</strong></a></p>
+<p><img src="20110627101509.jpg" width="554" height="309" /></p>
+<h3 class="STYLE2"><a><strong>S </strong></a><strong>格式（Numbered supervisory function）</strong><strong> </strong></h3>
+<p>S格式控制域标志 <br />
+第一个八位位组的第一位比特 = 1 并且第二位比特  = 0 <br />
+第三个八位位组第一位比特 = 0<br />
+特别规定 <br />
+S格式的APDU只包括APCI.  </p>
+<p>S格式的控制信息如图7所示。</p>
+<p><img src="20110627101616.jpg" width="553" height="179" /> </p>
+<p class="STYLE2"><a><strong>U 格式（Unnumbered  control function）</strong></a></p>
+<p><img src="20110627101654.jpg" width="555" height="395" /></p>
+<p><strong>3.<a>应用服务数据单元（ASDU）</a> </strong></p>
+<p class="STYLE2">3.1<a><strong>应用服务数据单元基本格式</strong></a></p>
+<p>数据单元标识符的结构定义 <br />
+  ●一个八位位组            类型标识;<br />
+  ●一个八位位组            可变结构限定词;<br />
+  ●二个八位位组            传送原因;<br />
+  ●二个八位位组            应用服务数据单元公共地址;<br />
+  ●三个八位位组            信息对象地址。 <br />
+  一组信息元素集可以是单个信息元素/信息元素集合、单个信息元素序列或者信息元素集合序列。 <br />
+  注∶类型标识定义了信息对象的结构、类型和格式。一个应用服务数据单元内全部信息对象有相同的结构、类型和格式。 </p>
+<p><img src="20110627102345.jpg" width="584" height="677" /> <br />
+<strong class="STYLE2">图7  应用服务数据单元(ASDU)的结构</strong></p>
+<p>&nbsp;</p>
+<p class="STYLE2">3.2<a><strong>应用报文类型</strong></a></p>
+<p>监视方向的应用功能类型 <br />
+  类型标识∶=UI8[1..8]&lt;0..44&gt;<br />
+  &lt;1&gt;∶=  单点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_SP_NA_1<br />
+  &lt;3&gt;∶=  双点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_DP_NA_1<br />
+  &lt;9&gt;∶=  测量值，规一化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_NA_1<br />
+  &lt;11&gt;∶= 测量值，标度化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_NB_1<br />
+&lt;30&gt;∶=  带时标CP56Time2a的单点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_SP_TB_1<br />  
+  &lt;31&gt;∶= 带时标CP56Time2a的双点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_DP_TB_1<br/>
+&lt;34&gt;∶= 带时标CP56Time2a的测量值，规一化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_TD_1<br />
+&lt;35&gt;∶= 带时标CP56Time2a的测量值，标度化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_TE_1<br />
+  控制方向的过程信息 <br />
+  类型标识∶= UI8[1..8]&lt;45..69&gt;<br />
+  CON&lt;45&gt;∶=  单命令&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C_SC_NA_1<br />
+  CON&lt;46&gt;∶=  双命令&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C_DC_NA_1<br />
+  CON&lt;48&gt;∶=  设点命令，规一化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C_SE_NA_1<br />
+  CON&lt;61&gt;∶＝带CP56Time2a时标的设定值命令、规一化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C-SE-TA-1<br />
+  CON&lt;137&gt;∶＝带CP56Time2a时标的多点设定值命令、规一化值&nbsp;&nbsp;&nbsp;&nbsp;C-SE-TD-1</p>
+<p>在监视方向的系统信息 <br />
+  类型标识∶= UI8[1..8]&lt;70..99&gt;<br />
+  &lt;70&gt;∶=  初始化结束&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M_EI_NA_1<br />
+  &lt;71..99&gt;∶=  保留 <br />
+  在控制方向的系统信息 <br />
+  类型标识∶= UI8[1..8]&lt;100..109&gt;<br />
+  CON&lt;100&gt;∶=  总召唤命令&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C_IC_NA_1<br />
+  &lt;102&gt;∶=  读命令&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C_RD_NA_1<br />
+  CON&lt;103&gt;∶=  时钟同步命令&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C_CS_NA<br />
+CON&lt;105&gt;∶= 复位进程命令&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C_RP_NA_1 <br />
+<p class="STYLE2">3.3<a><strong>可变结构限定词</strong></a> </p>
+<p>在应用服务数据单元中，其数据单元标识符的第二个八位位组定义为可变结构限定词，规定如下  ∶  <br />
+  bit    8    7    6   5    4    3   2    1   </p>
+<div align="center">
+  <table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="32"><br />
+        SQ </td>
+      <td width="32"><p align="center">26</p></td>
+      <td width="32"><p align="center">&nbsp;</p></td>
+      <td width="32"><p align="center">数 </p></td>
+      <td width="32"><p align="center">目 </p></td>
+      <td width="32"><p align="center">&nbsp;</p></td>
+      <td width="32"><p align="center">&nbsp;</p></td>
+      <td width="32"><p align="center">20</p></td>
+    </tr>
+  </table>
+</div>
+<p>    <strong>               </strong><strong> </strong><br />
+  可变结构限定词域值语义定义 <br />
+  可变结构限定词＝VARIABLE STRUCTURE QUALIFIER∶＝CP8{number、SQ} <br />
+  number ＝N＝数目∶＝ UI7[1..7]&lt;0..127&gt;<br />
+  &lt;0&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝应用服务数据单元不含信息对象 <br />
+  &lt;1..127&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝应用服务数据单元信息元素(单个信息元素或同类信息元素组合)的数目 <br />
+  SQ＝单个或者顺序∶＝ BS1[8]&lt;0..1&gt;<br />
+  &lt;0&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝寻址同一种类型的许多信息对象中单个的信息元素或者信息元素的集合 <br />
+  &lt;1&gt;∶＝寻址ASDU单个信息对象中顺序的单个信息元素信息元素的同类集合 <br />
+  SQ&lt;0&gt;和N&lt;0..127&gt;∶＝信息对象的数目i<br />
+  SQ&lt;1&gt;和N&lt;0..127&gt;∶＝每个应用服务数据单元中单个对象的信息元素或者信息元素的集合的数目j<br />
+  SQ位规定寻址后续信息对象或单个信息元素/信息元素集合的方法。 <br />
+  SQ∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝ 0 由信息对象地址寻址的单个信息元素或信息元素集合。应用服务数据单元可以由一个或者多个同类的信息对象所组成。数目N是一个二进制数，它定义了信息对象的数目。 <br />
+SQ∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝ 1 单个信息元素或者信息元素同类集合的序列(即同一种格式测量值)由信息对象地址来寻址(见IEC 60870-5-3中的5.1.5),信息对象地址是顺序单个信息元素或者信息元素集合的第一个信息元素或者集合的地址。后续单个信息元素或者信息元素集合的地址是从这个地址起顺序加1。数目N是一个二进制数，它定义了单个信息元素或者信息元素集合的数目。在顺序单个信息元素或者信息元素集合的情况下每个应用服务数据单元仅安排一个信息对象。(在回答总召唤和组召唤时必须使用SQ＝1，在变化量传输时视具体情况选用SQ＝1或SQ＝0)
+<p class="STYLE2">3.4<a><strong>应用服务数据单元公共地址</strong></a></p>
+<p>应用服务数据单元公共地址为二个字节，规定高字节固定为0。</p>
+<p class="STYLE2">3.5<a><strong>传送原因</strong></a></p>
+<p>在应用服务数据单元中，其数据单元标识符的第三个和第四个八位位组定义为传送原因，如下所示:                                                                <br />
+  bit      8    7     6    5    4    3     2    1</p>
+<div align="center">
+  <table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="37"><br />
+        T </td>
+      <td width="38"><p align="center">P/N</p></td>
+      <td width="37"><p align="center">25</p></td>
+      <td width="38"><p align="center">&nbsp;</p></td>
+      <td width="37"><p align="center">原 </p></td>
+      <td width="38"><p align="center">因 </p></td>
+      <td width="37"><p align="center">&nbsp;</p></td>
+      <td width="38"><p align="center"> </p>
+          <div>
+            <p>传送原因 </p>
+          </div>
+                                                                                                                                                                                                                                                                                                                                                       &nbsp;20
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="300" colspan="8"><p align="center">源发地址 </p></td>
+    </tr>
+  </table>
+</div>
+<p>                                                                                 <strong>                  </strong> <br />
+  传送原因域值语义定义 <br />
+  传送原因＝CAUSE OF TRANSMISSION∶＝ CP8{Cause,P/N,T}<br />
+  其中  Cause∶＝UI6[1..6]&lt;0..63&gt;<br />
+  &lt;0&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝ 未定义 <br />
+  &lt;1..63&gt;∶&nbsp;&nbsp;&nbsp;＝传送原因序号 <br />
+  &lt;1..47&gt;∶&nbsp;&nbsp;&nbsp;＝本配套标准的标准定义(兼容范围)见表14<br />
+  &lt;48..63&gt;∶&nbsp;＝ 专用范围 <br />
+  P/N∶＝ BS1[7]&lt;0..1&gt;<br />
+  &lt;0&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝ 肯定确认 <br />
+  &lt;1&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝否定确认  <br />
+  T＝test∶＝ BS1[8]&lt;0..1&gt;<br />
+  &lt;0&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝未试验   <br />
+  &lt;1&gt;∶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;＝试验 <br />
+  控制站将舍弃那些传送原因值没有被定义的应用服务数据单元。 <br />
+  将应用服务数据单元送给某个特定的应用任务(程序)时，应用任务(程序)根据传送原因的内容便于进行处理。 <br />
+  P/N位用以对由始发应用功能所请求的激活以肯定或者否定确认，在无关的情况下P/N置零。 <br />
+  传送原因的语义 <br />
+  原因 ＝Cause ∶＝UI6[1..6]&lt;0..63&gt;<strong></strong><br />
+  &lt;0&gt;∶＝ 未用 <br />
+  &lt;1&gt;∶＝ 周期、循环&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;per/cyc<br />
+  &lt;2&gt;∶＝ 背景扫描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1back        <br />
+  &lt;3&gt;∶＝ 突发(自发)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spont      <br />
+  &lt;4&gt;∶＝ 初始化&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;init           <br />
+  &lt;5&gt;∶＝请求或者被请求&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;req     <br />
+  &lt;6&gt;∶＝激活&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;act<br />
+  &lt;7&gt;∶＝激活确认                                         actcon<br />
+  &lt;8&gt;∶＝仃止激活                                         deact<br />
+  &lt;9&gt;∶＝仃止激活确认                                 deactcon<br />
+  &lt;10&gt;∶＝激活终止                                       actterm<br />
+  &lt;11&gt;∶＝远方命令引起的返送信息           retrem<br />
+  &lt;12&gt;∶＝当地命令引起的返送信息           retloc  <br />
+  &lt;13&gt;∶＝文件传输                                       file<br />
+  &lt;14..19&gt;∶＝为配套标准兼容范围保留                                        <br />
+  &lt;20&gt;∶＝响应站召唤                                   introgen      <br />
+  &lt;21&gt;∶＝响应第1组召唤                             inro1   <br />
+  &lt;22&gt;∶＝响应第2组召唤                             inro2<br />
+  &lt;23&gt;∶＝响应第3组召唤                             inro3   <br />
+  &lt;24&gt;∶＝响应第4组召唤                             inro4<br />
+  &lt;25&gt;∶＝响应第5组召唤                             inro5<br />
+  &lt;26&gt;∶＝响应第6组召唤&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inro6<br />
+  &lt;27&gt;∶＝响应第7组召唤                             inro7<br />
+  &lt;28&gt;∶＝响应第8组召唤                             inro8<br />
+  &lt;29&gt;∶＝响应第9组召唤                             inro9<br />
+  &lt;30&gt;∶＝响应第10组召唤                           inro10<br />
+  &lt;31&gt;∶＝响应第11组召唤                           inro11<br />
+  &lt;32&gt;∶＝响应第12组召唤                           inro12<br />
+  &lt;33&gt;∶＝响应第13组召唤                           inro13<br />
+  &lt;34&gt;∶＝响应第14组召唤                           inro14<br />
+  &lt;35&gt;∶＝响应第15组召唤                           inro15<br />
+  &lt;36&gt;∶＝响应第16组召唤                           inro16<br />
+  &lt;37&gt;∶＝响应计数量总召唤                       reqcogen<br />
+  &lt;38&gt;∶＝响应笫1组计数量召唤                 reqco1     <br />
+  &lt;39&gt;∶＝响应笫2组计数量召唤                 reqco2<br />
+  &lt;40&gt;∶＝响应笫3组计数量召唤                 reqco3<br />
+  &lt;41&gt;∶＝响应笫4组计数量召唤                 reqco4<br />
+  &lt;42..43&gt;∶＝为配套标准兼容范围保留 <br />
+  &lt;44&gt;∶＝未知的类型标识 <br />
+  &lt;45&gt;∶＝未知的传送原因 <br />
+  &lt;46&gt;∶＝未知的应用服务数据单元公共地址 <br />
+  &lt;47&gt;∶＝未知的信息对象地址 <br />
+  &lt;48..63&gt;∶＝特殊应用能力保留(专用范围)</p>
+<p>在控制方向的应用服务数据单元其数据单元标识符以及信息对象地址为定义的值(可变结构限定词除外) ，被控站以“P/N＝&lt;1&gt;否定确认”以及下述传送原因回答∶ <br />
+  未知类型标识&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44 <br />
+  未知传送原因&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45<br />
+  未知应用服务数据单元公共地址&nbsp;&nbsp;&nbsp;46<br />
+  未知信息对象地址&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;47<br />
+  控制站每次接收到下述应用服务数据单元，监视和记录通信差错∶ <br />
+  在监视方向上的应用服务数据单元，其数据单元标识符(可变结构队限定词除外)值未定义； <br />
+  在监视方向上的应用服务数据单元，其信息对象地址值未定义； <br />
+  由于控制方向未知(类型标识符45至51)的序号的镜像的应用服务数据单元。接收这些应用服务数据单元不会影响后续报文的处理。 </p>
+源发地址用来标明响应来自那个主站的召唤。一般情况不使用。规定源发地址不使用时置成0。
+<p class="STYLE2"><strong>4.<a><strong>应用功能报文结构</strong></a><a></a></strong></p>
+<p class="STYLE2">4.1<a><strong>监视方向的应用功能类型</strong></a></p>
+<p>类型标识∶=UI8[1..8]&lt;0..44&gt;<br />
+  &lt;1&gt;∶=  单点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_SP_NA_1<br/>
+  &lt;3&gt;:= 双点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_DP_NA_1<br/>
+  &lt;9&gt;∶=  测量值，规一化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_NA_1<br/>
+  &lt;11&gt;∶= 测量值，标度化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_NB_1<br/>
+  &lt;30&gt;∶= 带时标CP56Time2a的单点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_SP_TB_1<br/>
+  &lt;31&gt;∶=  带时标CP56Time2a的双点信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_DP_TB_1<br/>
+  &lt;34&gt;∶=  带时标CP56Time2a的测量值，规一化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_TD_1<br/>
+
+&lt;35&gt;∶= 带时标CP56Time2a的测量值，标度化值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M_ME_TE_1  </p>
+<p class="STYLE2">4.1.1<a><strong>单点遥信（类型标识1∶M_SP_NA_1）</strong></a><strong> </strong></p>
+<p><img src="20110627113416.jpg" width="593" height="330" /></p>
+<p><img src="20110627113458.jpg" width="608" height="508" /></p>
+<p><img src="20110627113520.jpg" width="572" height="313" /></p>
+<p><img src="1.JPG" width="1141" height="1385" /></p>
+<p><img src="2.JPG" width="1050" height="754" /></p>
+</body>
+</html>

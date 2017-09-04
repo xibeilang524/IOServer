@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>4.2 非线性采集量到工程量转换</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #990000}
+-->
+</style>
+</head>
+
+<body>
+<table border="0" cellpadding="4" width="100%">
+  <tbody>
+    <tr>
+      <td height="16"><h3>4.2 非线性采集量到工程量转换</h3></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ff9900" height="6"></td>
+    </tr>
+    <tr>
+      <td height="6"></td>
+    </tr>
+  </tbody>
+</table>
+<p>假定DDClient驱动从热电偶采集到的标签值范围为4-20mA的电流信号量，表示为-10到100℃，并且假定热电偶的电流变化为非线性的，但我们可以简化为分段线性进行计算：</p>
+<table border="1">
+  <tr>
+    <th scope="col" width="50">段号</th>
+    <th scope="col" width="200">电流信号范围</th>
+    <th scope="col" width="200">温度值范围</th>
+  </tr>
+  <tr>
+    <td align="center">1</td>
+    <td align="center">4-10mA</td>
+    <td align="center">-10 - 20℃</td>
+  </tr>
+  <tr>
+    <td align="center">2</td>
+    <td align="center">10-15mA</td>
+    <td align="center">20 - 50℃</td>
+  </tr>
+  <tr>
+    <td align="center">3</td>
+    <td align="center">15-20mA</td>
+    <td align="center">50 - 100℃</td>
+  </tr>
+</table>
+<p>那么我们设定：al为电流信号量下限，ah为电流信号上限，cl为温度值下限，ch为温度值上限，x表示当前采集到的电流信号量，而y为当前温度的工程量，则计算公式为：</p>
+<p>y = (x - al) * (ch - cl) / (ah - al) + cl</p>
+<p>将分段线性表代入以上公式，可以得到以下三个计算公式：</p>
+<ul>
+  <li>当x &lt;= 10mA时：y = (x - 4) * 5 - 10；</li>
+  <li>当x &lt;= 15mA时：y = (x - 10) * 6 + 20；</li>
+  <li>当x &gt; 15mA时： y = (x - 15) * 10 + 50；</li>
+</ul>
+<p>这里我们需要使用到两个if()函数来进行分段计算：</p>
+<p><span class="STYLE1">if</span>(<span class="STYLE1">this</span> &lt;= 10, (<span class="STYLE1">this</span> - 4) * 5 - 10, <span class="STYLE1">if</span>(<span class="STYLE1">this</span> &lt;= 15, (<span class="STYLE1">this</span> - 10) * 6 + 20, (<span class="STYLE1">this</span> - 15) * 10 + 50))</p>
+<p>&nbsp;</p>
+<hr />
+<p align="center"><a href="http://www.tpri.com.cn">版权所有(C) 2010 西安热工研究院有限公司</a></p>
+</body>
+</html>

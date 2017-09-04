@@ -1,0 +1,21 @@
+; opcdrv.def : Declares the module parameters for the DLL.
+
+LIBRARY      "opcdrv"
+DESCRIPTION  'opcdrv Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	; 编写驱动程序时拷贝以下内容到驱动的.def文件中
+	DC_GetDrvInfo
+	DC_Create
+	DC_Destroy
+	DC_Start
+	DC_Stop
+	DC_GetErrMsg
+	DC_GetTagDef
+	DC_GetRunStatus
+	DC_GetConfigSize
+	DC_GetConfigData
+	DC_Config
+	DC_WriteVar
+	

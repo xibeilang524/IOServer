@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800025">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DDClient计算公式帮助手册">
+		<param name="Local" value="1_概述.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="概述">
+			<param name="Local" value="1_概述.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="计算公式语法">
+			<param name="Local" value="2_计算公式语法.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="数据类型">
+				<param name="Local" value="2_1_数据类型.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="数学运算">
+				<param name="Local" value="2_2_数学运算.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="位运算">
+				<param name="Local" value="2_3_位运算.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="运算优先级">
+				<param name="Local" value="2_4_运算优先级.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="函数调用">
+				<param name="Local" value="2_5_函数调用.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="如何编写标签的计算公式">
+				<param name="Local" value="2_6_如何编写标签的计算公式.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="函数列表">
+			<param name="Local" value="3_函数列表.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="标签函数">
+				<param name="Local" value="3_1_标签函数.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="数学函数">
+				<param name="Local" value="3_2_数学函数.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="应用示例">
+			<param name="Local" value="4_应用示例.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="线性采集量到工程量转换">
+				<param name="Local" value="4_1_线性采集量到工程量转换.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="非线性采集量到工程量转换">
+				<param name="Local" value="4_2_非线性采集量到工程量转换.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="计算标签为几个标签的平均值">
+				<param name="Local" value="4_3_计算标签为几个标签的平均值.html">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,55 @@
+; PI_F701Drv.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PI_F701Drv"
+DESCRIPTION  'PI_F701Drv Windows Dynamic Link Library'
+
+EXPORTS
+	DB_ExecCommand
+	; 管理
+	DB_GetDriverInfo
+	DB_Create
+	DB_Destroy
+	DB_Config
+	DB_Connect
+	DB_DisConnect
+
+	; 标签
+	DB_GetTagAttr
+	DB_AddTag
+	DB_DelTag
+	DB_EditTag
+
+	; 实时
+	DB_WriteReal
+	DB_GetRealVal
+	DB_GetRealStr
+	DB_GetRealBlob
+	
+	; 历史
+	DB_WriteHistory
+
+	DB_GetHisVal
+	;放弃该接口
+	;DB_GetHisVal2
+
+	DB_GetHisStr
+	DB_GetHisBlob
+
+	DB_DelHisVal
+	DB_DelHisVal2
+	
+	; SOE
+	DB_WriteSoe
+	DB_GetSoe
+	DB_DelSoe
+	
+	; 统计
+	DB_GetSumVal
+	
+	DB_GetMultiPointHisVal
+	DB_GetDiSumVal
+	DB_GetHisValFilter
+	
+	DB_TagSearch
+	DB_WriteStreamMessage
+

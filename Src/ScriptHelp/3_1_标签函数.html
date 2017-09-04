@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>3.1 标签函数</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #0000FF}
+.STYLE2 {color: #990000}
+-->
+</style>
+</head>
+
+<body>
+<table border="0" cellpadding="4" width="100%">
+  <tbody>
+    <tr>
+      <td height="16"><h3>3.1 标签函数</h3></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ff9900" height="6"></td>
+    </tr>
+    <tr>
+      <td height="6"></td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li><span class="STYLE1">double</span> <span class="STYLE2">tv</span>(<span class="STYLE1">string</span> szTagName)</li>
+</ul>
+<blockquote>
+  <p>读指定标签szTagName的当前值，其中的标签名不区分大小写，比如：</p>
+  <p><span class="STYLE2">tv</span>(<span class="STYLE2">&quot;DCS.AI00001&quot;</span>)</p>
+  <p>返回DCS.AI00001标签的当前值。</p>
+  <p>注意：tv()函数只能读取当前驱动实例中的标签值，无法跨驱动读取其他驱动实例中的标签值。</p>
+</blockquote>
+<ul>
+  <li><span class="STYLE1">double</span> <span class="STYLE2">this</span></li>
+</ul>
+<blockquote>
+  <p>this不是函数，是一个计算公式全局变量，它实际为当前标签的值。比如标签DCS.AI00010需要进行系数转换，系数为1.1，则可以这样编写计算公式：</p>
+  <p><span class="STYLE2">tv</span>(<span class="STYLE2">&quot;DCS.AI00010&quot;</span>) * 1.1</p>
+  <p>而这里提供一种更方便的写法：</p>
+  <p><span class="STYLE2">this</span> * 1.1</p>
+  <p>这种写法不但代码简洁，而且运行速度更快，因为它不需要查找标签的过程，可以直接访问到标签的当前值。</p>
+</blockquote>
+<hr />
+<p align="center"><a href="http://www.tpri.com.cn">版权所有(C) 2010 西安热工研究院有限公司</a></p>
+</body>
+</html>

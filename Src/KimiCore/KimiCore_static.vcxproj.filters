@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Crypto">
+      <UniqueIdentifier>{b2ec52c8-5cad-4d4d-92cb-63d7f99c6d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{3625a609-b403-4674-927f-9dd6eb52c7c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="map">
+      <UniqueIdentifier>{fe7c1cc7-0fcf-4890-8e72-3086f8946f84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{a581f844-c455-429e-ba0a-0a0be883904d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hash">
+      <UniqueIdentifier>{66255606-f0fc-41f0-9d0e-a776d636e82d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="License">
+      <UniqueIdentifier>{6dbee045-5541-42e9-8a0b-f62057506368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream">
+      <UniqueIdentifier>{d5f34ffe-98ea-4cae-9ddf-66d3d0e79614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compressor">
+      <UniqueIdentifier>{2d077cc0-c252-4126-bcc0-640c984192f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compressor\google-snappy">
+      <UniqueIdentifier>{8145190f-c013-4126-bc92-adb776244f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compressor\lz4">
+      <UniqueIdentifier>{fd2da8d2-1ea8-465a-94ff-038bc7aaf020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compressor\minilzo">
+      <UniqueIdentifier>{eaa72ce9-4346-4d83-98b6-099130e2ac53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compressor\QuickLZ">
+      <UniqueIdentifier>{eb348ddb-bf77-46fe-af03-8cc328927d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SmartPtr">
+      <UniqueIdentifier>{f2003ce5-02b1-43d0-87ef-a2ff08fa5f48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{4cf5e206-c466-4123-bba6-9d8523e39399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lock">
+      <UniqueIdentifier>{2e66060f-c074-49fb-bfce-903492d5ba09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{219dfe26-a0d9-4c4f-922f-2d0e98193bdb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Crypto\Base64.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypto\Rijndael.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxml.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlerror.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlparser.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Random.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\stl_string.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Utility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Win32API.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\CRC32.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\CRC64.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\MD5.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\SHA1.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="License\HardwareSerialNumber.cpp">
+      <Filter>License</Filter>
+    </ClCompile>
+    <ClCompile Include="License\LicenseFile.cpp">
+      <Filter>License</Filter>
+    </ClCompile>
+    <ClCompile Include="License\MachineCodeHelper.cpp">
+      <Filter>License</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\MemoryStream.cpp">
+      <Filter>stream</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\DataCompressor.cpp">
+      <Filter>Compressor</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\google-snappy\snappy-c.cc">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\google-snappy\snappy-sinksource.cc">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\google-snappy\snappy-stubs-internal.cc">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\google-snappy\snappy.cc">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\lz4\lz4.c">
+      <Filter>Compressor\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\lz4\xxhash.c">
+      <Filter>Compressor\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\minilzo\minilzo.c">
+      <Filter>Compressor\minilzo</Filter>
+    </ClCompile>
+    <ClCompile Include="Compressor\QuickLZ\quicklz.c">
+      <Filter>Compressor\QuickLZ</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\CondVarLock.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\Event.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\FastLock.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\MutexLock.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\RWLock.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\SpinLock.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\IOCPThreadPool.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\Thread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\KimiCore\Crypto\Base64.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Crypto\Rijndael.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\tinyxml.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\MFCMap.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Utility\DebugUtils.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Utility\Random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\stl_string.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Utility\TimeCounter.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Utility\Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Utility\Win32API.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="hash\CRC32.h">
+      <Filter>hash</Filter>
+    </ClInclude>
+    <ClInclude Include="hash\CRC64.h">
+      <Filter>hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\MD5.h">
+      <Filter>hash</Filter>
+    </ClInclude>
+    <ClInclude Include="hash\SHA1.h">
+      <Filter>hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\License\HardwareSerialNumber.h">
+      <Filter>License</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\License\LicenseFile.h">
+      <Filter>License</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\License\MachineCodeHelper.h">
+      <Filter>License</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\stream\DynamicArray.h">
+      <Filter>stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\stream\MemoryStream.h">
+      <Filter>stream</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\google-snappy\snappy-c.h">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\google-snappy\snappy-internal.h">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\google-snappy\snappy-sinksource.h">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\google-snappy\snappy-stubs-internal.h">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\google-snappy\snappy-stubs-public.h">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\google-snappy\snappy.h">
+      <Filter>Compressor\google-snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\lz4\lz4.h">
+      <Filter>Compressor\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\lz4\xxhash.h">
+      <Filter>Compressor\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\minilzo\lzoconf.h">
+      <Filter>Compressor\minilzo</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\minilzo\lzodefs.h">
+      <Filter>Compressor\minilzo</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\minilzo\minilzo.h">
+      <Filter>Compressor\minilzo</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor\QuickLZ\quicklz.h">
+      <Filter>Compressor\QuickLZ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\SmartPtr\BufferPtr.h">
+      <Filter>SmartPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Memory\PrivateHeap.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\CondVarLock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\Event.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\FastLock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\LockGuard.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\MutexLock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\RWLock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\lock\SpinLock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Thread\IOCPThreadPool.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KimiCore\Thread\Thread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

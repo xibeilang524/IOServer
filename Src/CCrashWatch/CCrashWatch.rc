@@ -1,0 +1,157 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,6,0,0
+ PRODUCTVERSION 2,6,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "TPRI-SIS系统异常监控模块"
+            VALUE "CompanyName", "西安热工研究院有限公司"
+            VALUE "FileDescription", "TPRI-SIS系统异常监控模块"
+            VALUE "FileVersion", "2, 6, 0, 0"
+            VALUE "InternalName", "TPRICrashWatch"
+            VALUE "LegalCopyright", "版权所有 (C) 西安热工研究院有限公司 2009-2010"
+            VALUE "OriginalFilename", "TPRICrashWatch.dll"
+            VALUE "PrivateBuild", "20111107"
+            VALUE "ProductName", "TPRI-SIS系统异常监控模块"
+            VALUE "ProductVersion", "2, 6, 0, 0"
+            VALUE "SpecialBuild", "20111107"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_CRASH          ICON                    "CCrashWatch.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CRASH DIALOGEX 0, 0, 291, 219
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TPRI-SIS异常监控模块"
+FONT 10, "宋体", 400, 0, 0x86
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,183,198,101,14
+    LTEXT           "",IDC_BANNER,0,0,240,35
+    LTEXT           "",IDC_APP_ICON,240,0,50,35,SS_NOTIFY
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,35,295,1
+    LTEXT           "如果您正在处于进程当中，信息有可能丢失。",IDC_STATIC,15,43,260,12
+    LTEXT           "请将些问题报告给我们，以获得解决方案。",IDC_PLEASE_TELL_US,15,64,260,9
+    LTEXT           "我们已经创建了一个错误报告，您可以将它发送给我们。我们将此报告视为保密的和匿名的。",IDC_STATIC,15,77,262,17
+    LTEXT           "当错误发生时，及时准确描述您的操作过程并向我们报告，将帮助我们诊断造成这种错误的原因及提高该软件质量。",IDC_STATIC,15,99,261,16
+    CONTROL         "重新启动",IDC_CHECK_RESTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,153,253,26
+    LTEXT           "为了您的程序能够继续提供服务，我们将为您重新启动进程，您也可以取消该操\n作，而自己决定在必要的时候再启动进程。",IDC_STATIC,15,132,261,24
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,188,295,1
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_CRASH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

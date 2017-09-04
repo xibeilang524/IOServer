@@ -1,0 +1,390 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\odbcdrv.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,6,0
+ PRODUCTVERSION 2,5,6,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "odbcdrv DLL"
+            VALUE "FileVersion", "2, 5, 6, 0"
+            VALUE "InternalName", "odbcdrv"
+            VALUE "LegalCopyright", "版权所有 (C) 2010"
+            VALUE "OriginalFilename", "odbcdrv.DLL"
+            VALUE "PrivateBuild", "20110427"
+            VALUE "ProductName", "odbcdrv Dynamic Link Library"
+            VALUE "ProductVersion", "2, 5, 6, 0"
+            VALUE "SpecialBuild", "20110427"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CONFIG DIALOG  0, 0, 481, 307
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ODBC标签表配置"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_STATIC_FRM,"Static",SS_BLACKFRAME,7,7,408,293
+    DEFPUSHBUTTON   "退出",IDOK,424,7,50,14
+    PUSHBUTTON      "导出示例",IDC_BUTTON_EXSAMP,424,36,50,14
+    PUSHBUTTON      "导入",IDC_BUTTON_INPORT,424,57,50,14
+    PUSHBUTTON      "导出",IDC_BUTTON_EXPORT,424,76,50,14
+    PUSHBUTTON      "删除选择",IDC_BUTTON_DELSEL,424,109,50,14
+    PUSHBUTTON      "上一步",IDC_BUTTON_UP,424,286,50,14,NOT WS_VISIBLE
+END
+
+IDD_DIALOG_CONNSTR DIALOG  0, 0, 250, 131
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "连接字符串配置"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,136,110,50,14
+    PUSHBUTTON      "取消",IDCANCEL,193,110,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,100,249,1
+    LTEXT           "数据库连接字符串：",IDC_STATIC,7,7,68,8
+    EDITTEXT        IDC_EDIT_CONNSTR,7,19,236,70,ES_MULTILINE | ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_DB2 DIALOG  0, 0, 260, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "服务器：",IDC_STATIC,29,13,31,8
+    LTEXT           "服务器端口：",IDC_STATIC,14,34,46,8
+    EDITTEXT        IDC_EDIT_SERVER,66,7,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,66,27,111,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "数据库名：",IDC_STATIC,22,53,38,8
+    LTEXT           "用户名：",IDC_STATIC,29,73,31,8
+    LTEXT           "用户密码：",IDC_STATIC,22,93,38,8
+    EDITTEXT        IDC_EDIT_DATABASE,66,47,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,66,67,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,66,87,111,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "（默认为50000）",IDC_STATIC,177,34,58,8
+    PUSHBUTTON      "IBM DB2连接字符串",IDC_BUTTON_CONNSTR,66,112,74,14
+    LTEXT           "（IP地址或计算机名）",IDC_STATIC,177,13,76,8
+END
+
+IDD_DIALOG_DBCONFIG DIALOG  0, 0, 275, 202
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ODBC数据库连接配置"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "下一步 >>",IDC_BUTTON_NEXT,176,181,45,14
+    PUSHBUTTON      "取消",IDCANCEL,223,181,45,14
+    PUSHBUTTON      "<< 上一步",IDC_BUTTON_BACK,128,181,45,14,WS_DISABLED
+    CONTROL         "Tab1",IDC_TAB_LIST,"SysTabControl32",TCS_BUTTONS,7,7,261,156
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,171,276,1
+    PUSHBUTTON      "测试连接",IDC_BUTTON_TEST,7,181,45,14
+    PUSHBUTTON      "配置标签",IDC_BUTTON_TABCFG,55,181,50,14
+END
+
+IDD_DIALOG_MSSQL DIALOG  0, 0, 260, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "（默认实例不填写）",IDC_STATIC,170,53,68,8
+    LTEXT           "服务器：",IDC_STATIC,22,13,31,8
+    LTEXT           "服务器端口：",IDC_STATIC,7,34,46,8
+    LTEXT           "数据库实例：",IDC_STATIC,7,53,46,8
+    EDITTEXT        IDC_EDIT_SERVER,59,7,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,59,27,111,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_INST,59,47,111,14,ES_AUTOHSCROLL
+    LTEXT           "数据库名：",IDC_STATIC,15,73,38,8
+    LTEXT           "用户名：",IDC_STATIC,22,93,31,8
+    LTEXT           "用户密码：",IDC_STATIC,15,113,38,8
+    EDITTEXT        IDC_EDIT_DATABASE,59,67,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,59,87,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,59,107,111,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "（默认为1433）",IDC_STATIC,170,34,54,8
+    LTEXT           "（IP地址或计算机名）",IDC_STATIC,170,13,76,8
+    PUSHBUTTON      "SQL Server连接字符串",IDC_BUTTON_CONNSTR,59,131,90,14
+END
+
+IDD_DIALOG_MYSQL DIALOG  0, 0, 260, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "服务器：",IDC_STATIC,22,13,31,8
+    LTEXT           "服务器端口：",IDC_STATIC,7,34,46,8
+    EDITTEXT        IDC_EDIT_SERVER,59,7,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,59,27,111,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "数据库名：",IDC_STATIC,15,53,38,8
+    LTEXT           "用户名：",IDC_STATIC,22,73,31,8
+    LTEXT           "用户密码：",IDC_STATIC,15,93,38,8
+    EDITTEXT        IDC_EDIT_DATABASE,59,47,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,59,67,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,59,87,111,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "（默认为3306）",IDC_STATIC,170,34,54,8
+    LTEXT           "（IP地址或计算机名）",IDC_STATIC,170,13,76,8
+    PUSHBUTTON      "MySQL连接字符串",IDC_BUTTON_CONNSTR,59,112,74,14
+END
+
+IDD_DIALOG_ORACLE DIALOG  0, 0, 260, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "服务器：",IDC_STATIC,45,13,31,8
+    COMBOBOX        IDC_COMBO_SERVER,83,7,111,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "用户名：",IDC_STATIC,45,33,31,8
+    EDITTEXT        IDC_EDIT_USER,83,27,111,14,ES_AUTOHSCROLL
+    LTEXT           "用户密码：",IDC_STATIC,38,53,38,8
+    EDITTEXT        IDC_EDIT_PASSWORD,83,47,111,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Oracle连接字符串",IDC_BUTTON_CONNSTR,83,86,74,14
+END
+
+IDD_DIALOG_SELDBDRV DIALOG  0, 0, 250, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         3005,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,0,0,77,156
+    LTEXT           "请根据您的需要选择数据库类型：",IDC_STATIC,87,11,112,8
+    LISTBOX         IDC_LIST_DBTYPE,87,23,145,111,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_SYBASE DIALOG  0, 0, 260, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "服务器：",IDC_STATIC,45,13,31,8
+    EDITTEXT        IDC_EDIT_SERVER,83,7,111,14,ES_AUTOHSCROLL
+    LTEXT           "用户名：",IDC_STATIC,45,33,31,8
+    LTEXT           "用户密码：",IDC_STATIC,38,53,38,8
+    EDITTEXT        IDC_EDIT_USER,83,27,111,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,83,47,111,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Sybase连接字符串",IDC_BUTTON_CONNSTR,83,86,74,14
+END
+
+IDD_DIALOG_TABLE DIALOG  0, 0, 250, 156
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        " 数据表 ",IDC_STATIC,17,4,216,100
+    LTEXT           "表名:",IDC_STATIC,28,19,45,8
+    EDITTEXT        IDC_EDIT_TABNAME,91,17,126,13,ES_AUTOHSCROLL
+    LTEXT           "标签名/ID列名:",IDC_STATIC,28,36,55,8
+    EDITTEXT        IDC_EDIT_FNAME,91,34,126,13,ES_AUTOHSCROLL
+    LTEXT           "时标字段名:",IDC_STATIC,28,53,54,8
+    EDITTEXT        IDC_EDIT_FTIME,91,51,126,13,ES_AUTOHSCROLL
+    LTEXT           "质量字段名:",IDC_STATIC,28,71,51,8
+    EDITTEXT        IDC_EDIT_FQA,91,68,126,13,ES_AUTOHSCROLL
+    LTEXT           "值字段名:",IDC_STATIC,28,88,47,8
+    EDITTEXT        IDC_EDIT_FVAL,91,85,126,13,ES_AUTOHSCROLL
+    GROUPBOX        " 存储方式 ",IDC_STATIC,17,109,216,42,WS_GROUP
+    CONTROL         "实时表（一个标签一行，更新方式）",IDC_RADIO_SL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,28,121,155,9
+    CONTROL         "历史表（一个标签多行，追加方式）",IDC_RADIO_ML,"Button",BS_AUTORADIOBUTTON,28,136,159,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 474
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 300
+    END
+
+    IDD_DIALOG_CONNSTR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_DIALOG_DB2, DIALOG
+    BEGIN
+        VERTGUIDE, 60
+        VERTGUIDE, 66
+        HORZGUIDE, 21
+        HORZGUIDE, 41
+        HORZGUIDE, 61
+        HORZGUIDE, 81
+        HORZGUIDE, 101
+    END
+
+    IDD_DIALOG_DBCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_DIALOG_MSSQL, DIALOG
+    BEGIN
+        VERTGUIDE, 53
+        VERTGUIDE, 59
+        VERTGUIDE, 170
+        HORZGUIDE, 21
+        HORZGUIDE, 42
+        HORZGUIDE, 61
+        HORZGUIDE, 81
+        HORZGUIDE, 101
+        HORZGUIDE, 121
+    END
+
+    IDD_DIALOG_MYSQL, DIALOG
+    BEGIN
+        VERTGUIDE, 53
+        VERTGUIDE, 59
+        VERTGUIDE, 170
+        HORZGUIDE, 21
+        HORZGUIDE, 42
+        HORZGUIDE, 61
+        HORZGUIDE, 81
+        HORZGUIDE, 101
+    END
+
+    IDD_DIALOG_ORACLE, DIALOG
+    BEGIN
+        VERTGUIDE, 76
+        VERTGUIDE, 83
+        HORZGUIDE, 21
+        HORZGUIDE, 41
+        HORZGUIDE, 61
+    END
+
+    IDD_DIALOG_SYBASE, DIALOG
+    BEGIN
+        VERTGUIDE, 76
+        VERTGUIDE, 83
+        HORZGUIDE, 21
+        HORZGUIDE, 41
+        HORZGUIDE, 61
+    END
+
+    IDD_DIALOG_TABLE, DIALOG
+    BEGIN
+        VERTGUIDE, 28
+        VERTGUIDE, 91
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_DBSEL        BITMAP                  "res\\dbdrv_list.bmp"
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\odbcdrv.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

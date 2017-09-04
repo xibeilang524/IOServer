@@ -1,0 +1,29 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=script.chm
+Contents file=script.hhc
+Default topic=1_概述.html
+Display compile progress=No
+Language=0x804 中文(中国)
+Title=DDClient计算公式帮助手册
+
+
+[FILES]
+1_概述.html
+4_应用示例.html
+2_1_数据类型.html
+2_2_数学运算.html
+2_3_位运算.html
+2_4_运算优先级.html
+2_5_函数调用.html
+2_计算公式语法.html
+3_函数列表.html
+2_6_如何编写标签的计算公式.html
+4_2_非线性采集量到工程量转换.html
+3_1_标签函数.html
+3_2_数学函数.html
+4_1_线性采集量到工程量转换.html
+4_3_计算标签为几个标签的平均值.html
+
+[INFOTYPES]
+

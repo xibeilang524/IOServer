@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>2.1 数据类型</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #990000}
+-->
+</style>
+</head>
+
+<body>
+<table border="0" cellpadding="4" width="100%">
+  <tbody>
+    <tr>
+      <td height="16"><h3>2.1 数据类型</h3></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ff9900" height="6"></td>
+    </tr>
+    <tr>
+      <td height="6"></td>
+    </tr>
+  </tbody>
+</table>
+<p>DDClient的计算公式的语法中，只支持两种数据类型：双精浮点数和字符串：</p>
+<h4>2.1.1 双精浮点数据类型</h4>
+<p>双精浮点数据类型是计算公式运算过程中唯一支持的数据类型，对于DIGITAL、INT32和INT64类型标签的运算，也是先转换为double类型进行计算，然后再将计算得到的double类型结果转换为对应的标签数据类型。</p>
+<p>像下以的数值，都是有效的double类型值：</p>
+<p>0.1234<br />
+  3.1415926<br />
+10</p>
+<h4>2.1.2 字符串</h4>
+<p>字符串类型是不参与运算的数据类型，仅用于作为函数参数进行传递，而其实际的意义将由该函数进行解释。比如TV()函数就是一个带字符串参数的自定义函数，其中的字符串参数表示标签名称，TV()返回指定标签的当前值。</p>
+<p>计算公式使用双引号来声明一个字符串常量，比如：</p>
+<p><span class="STYLE1">&quot;DCS.AI00001&quot;</span></p>
+<p>字符串数据类型不支持运算，所以请不要编写这样的代码：</p>
+<p><span class="STYLE1">&quot;DCS.&quot;</span> + <span class="STYLE1">&quot;AI00001&quot;</span></p>
+<p>计算公式系统无法识别这样的字符串运算。</p>
+<hr />
+<p align="center"><a href="http://www.tpri.com.cn">版权所有(C) 2010 西安热工研究院有限公司</a></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+; Operator.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Operator"
+DESCRIPTION  'Operator Windows Dynamic Link Library'
+
+EXPORTS
+	OPT_Create
+	OPT_Destroy
+	OPT_SetOptFile
+	OPT_LoadOptFile
+	OPT_MkDefault
+	OPT_Login
+	OPT_ModifyPass
+	OPT_OptMan
+	OPT_LoginNoWin
+	OPT_CheckLicense
+	OPT_GetLicenseInfo
+	OPT_GetMachineInfo
+	OPT_ShowLicDlg
+	OPT_GetLicProperty
+

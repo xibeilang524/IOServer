@@ -1,0 +1,276 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SimdrvEx.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,5,0
+ PRODUCTVERSION 2,5,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "数据采集软件模拟驱动 SimdrvEx"
+            VALUE "CompanyName", "服务科技"
+            VALUE "FileDescription", "SimdrvEx DLL"
+            VALUE "FileVersion", "2, 5, 5, 0"
+            VALUE "InternalName", "SimdrvEx"
+            VALUE "LegalCopyright", "版权所有 (C) 2009"
+            VALUE "OriginalFilename", "SimdrvEx.DLL"
+            VALUE "PrivateBuild", "20110310"
+            VALUE "ProductName", "SimdrvEx Dynamic Link Library"
+            VALUE "ProductVersion", "2, 5, 5, 0"
+            VALUE "SpecialBuild", "20110310"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CONFIG DIALOGEX 0, 0, 464, 295
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SimdrvEx标签配置"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,407,157,50,14
+    CONTROL         "",IDC_STATIC_FRM,"Static",SS_BLACKFRAME,7,7,395,281
+    PUSHBUTTON      "添加标签",IDC_BUTTON_ADD,407,7,50,14
+    PUSHBUTTON      "编辑标签",IDC_BUTTON_EDIT,407,27,50,14
+    PUSHBUTTON      "导出示例",IDC_BUTTON_EXSAMP,407,59,50,14
+    PUSHBUTTON      "导入",IDC_BUTTON_INPORT,407,80,50,14
+    PUSHBUTTON      "导出",IDC_BUTTON_EXPORT,407,99,50,14
+    PUSHBUTTON      "删除选择",IDC_BUTTON_DELSEL,407,117,50,14
+    PUSHBUTTON      "加速配置",IDC_BUTTON_ACCE,408,135,49,16
+END
+
+IDD_DIALOG_TAGATTR DIALOG 0, 0, 258, 171
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "标签编辑"
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,3,186,161
+    LTEXT           "标签名:",IDC_STATIC,25,22,27,8
+    EDITTEXT        IDC_EDIT_TAGNAME,60,18,120,14,ES_AUTOHSCROLL
+    LTEXT           "描述:",IDC_STATIC,32,43,20,8
+    EDITTEXT        IDC_EDIT_DESC,60,39,120,14,ES_AUTOHSCROLL
+    LTEXT           "单位:",IDC_STATIC,32,62,20,8
+    EDITTEXT        IDC_EDIT_UNIT,60,59,40,14,ES_AUTOHSCROLL
+    LTEXT           "数据类型:",IDC_STATIC,17,81,35,8
+    COMBOBOX        IDC_COMBO_DATATYPE,60,79,81,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "模拟方式:",IDC_STATIC,17,104,35,8
+    COMBOBOX        IDC_COMBO_SIMULATE_TYPE,60,101,80,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "基准值:",IDC_STATIC,25,127,27,8
+    EDITTEXT        IDC_EDIT_BASEVAL,60,123,80,14,ES_AUTOHSCROLL
+    LTEXT           "幅度(%):",IDC_STATIC,20,144,32,8
+    EDITTEXT        IDC_EDIT_PERCENT,60,140,80,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确认",IDOK,201,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,201,24,50,14
+END
+
+IDD_DIALOG_ACCE DIALOGEX 0, 0, 251, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "加速配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,194,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,194,24,50,14
+    LTEXT           "加速周期：",IDC_STATIC,19,37,43,8
+    EDITTEXT        IDC_EDIT_SPAN,68,33,53,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "ms",IDC_STATIC,141,34,20,11
+    LTEXT           "开始时间：",IDC_STATIC,19,75,43,8
+    LTEXT           "结束时间：",IDC_STATIC,19,94,43,8
+    LTEXT           "时标增量：",IDC_STATIC,19,56,43,8
+    LTEXT           "s",IDC_STATIC,140,54,8,8
+    EDITTEXT        IDC_EDIT_INCRE,68,53,53,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_ST,68,73,81,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ET,68,92,81,13,ES_AUTOHSCROLL
+    CONTROL         "允许加速模拟数据",IDC_CHECK_ALLOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,18,80,10
+END
+
+IDD_DLG_FILESETTING DIALOGEX 0, 0, 316, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文件配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,162,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,162,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 457
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 288
+    END
+
+    IDD_DIALOG_TAGATTR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        VERTGUIDE, 52
+        VERTGUIDE, 60
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_DIALOG_ACCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DLG_FILESETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_TAGATTR DLGINIT
+BEGIN
+    IDC_COMBO_DATATYPE, 0x403, 8, 0
+0x4944, 0x4947, 0x4154, 0x004c, 
+    IDC_COMBO_DATATYPE, 0x403, 6, 0
+0x4e49, 0x3354, 0x0032, 
+    IDC_COMBO_DATATYPE, 0x403, 8, 0
+0x4c46, 0x414f, 0x3354, 0x0032, 
+    IDC_COMBO_DATATYPE, 0x403, 6, 0
+0x4e49, 0x3654, 0x0034, 
+    IDC_COMBO_DATATYPE, 0x403, 8, 0
+0x4c46, 0x414f, 0x3654, 0x0034, 
+    IDC_COMBO_DATATYPE, 0x403, 7, 0
+0x5453, 0x4952, 0x474e, "\000" 
+    IDC_COMBO_SIMULATE_TYPE, 0x403, 9, 0
+0xdfcf, 0xd4d0, 0xa3c4, 0xe2c4, "\000" 
+    IDC_COMBO_SIMULATE_TYPE, 0x403, 9, 0
+0xfdd5, 0xd2cf, 0xa3c4, 0xe2c4, "\000" 
+    IDC_COMBO_SIMULATE_TYPE, 0x403, 9, 0
+0xe6cb, 0xfabb, 0xa3c4, 0xe2c4, "\000" 
+    0
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\SimdrvEx.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

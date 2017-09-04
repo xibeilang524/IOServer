@@ -1,0 +1,434 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\modbus.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,6,0,0
+ PRODUCTVERSION 2,6,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Modbus驱动for DDC2"
+            VALUE "CompanyName", "西安热工研究院有限公司"
+            VALUE "FileDescription", "modbus drv"
+            VALUE "FileVersion", "2, 6, 0, 0"
+            VALUE "InternalName", "modbus"
+            VALUE "LegalCopyright", "版权所有 (C) 2008"
+            VALUE "OriginalFilename", "modrtu485.DLL"
+            VALUE "PrivateBuild", "20120113"
+            VALUE "ProductName", "RC485 RTU MODBUS FOR DDC2驱动"
+            VALUE "ProductVersion", "2, 6, 0, 0"
+            VALUE "SpecialBuild", "20120113"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CFG DIALOG  0, 0, 555, 363
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "配置"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "通信配置",IDC_STATIC,7,8,39,8
+    EDITTEXT        IDC_EDIT_COM,47,6,368,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "通信配置 &O",IDC_BUTTON_COM,419,6,50,14
+    GROUPBOX        "",IDC_STATIC,7,23,540,31
+    PUSHBUTTON      "导入设备配置 &I",IDC_BUTTON_ADD,15,33,72,14
+    PUSHBUTTON      "导出设备配置(&E)",IDC_BUTTON_EXPORT,109,33,72,14
+    PUSHBUTTON      "删除设备配置 &D",IDC_BUTTON_DEL,203,33,72,14
+    PUSHBUTTON      "创建例子配置文件(&C)",IDC_BUTTON_EXAMPLE,307,33,90,14
+    LTEXT           "设备表:",IDC_STATIC,7,60,29,8
+    CONTROL         "List1",IDC_LIST_DEC,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,71,241,287
+    LTEXT           "设备数据项:",IDC_STATIC,260,60,45,8
+    LTEXT           "",IDC_STATIC_DEC,318,60,204,8
+    CONTROL         "List2",IDC_LIST_ITEM,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,257,71,290,287
+    PUSHBUTTON      "退出",IDOK,495,6,50,14
+    DEFPUSHBUTTON   "帮助(&H)",IDC_BUTTON_HELP,419,33,50,14
+END
+
+IDD_DIALOG_ITEMATTR DIALOG  0, 0, 231, 215
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "属性"
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "名称:",IDC_STATIC,7,7,25,8
+    EDITTEXT        IDC_EDIT_NAME,7,19,61,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "设备地址:",IDC_STATIC,117,7,35,8
+    EDITTEXT        IDC_EDIT_DECADDR,117,19,26,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "0-255",IDC_STATIC,149,19,21,8
+    LTEXT           "命令:",IDC_STATIC,7,42,20,8
+    EDITTEXT        IDC_EDIT_ORDER,7,53,26,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "0-255 10进制",IDC_STATIC,38,55,48,8
+    LTEXT           "寄存器地址:",IDC_STATIC,117,42,42,8
+    EDITTEXT        IDC_EDIT_REGADDR,117,53,46,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "0H-FFFFH 16进制",IDC_STATIC,164,56,60,8
+    LTEXT           "采集值类型:",IDC_STATIC,7,78,42,8
+    COMBOBOX        IDC_COMBO_RTYPE,7,91,46,55,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "注释:",IDC_STATIC,7,140,20,8
+    EDITTEXT        IDC_EDIT_NOTE,7,152,216,24,ES_MULTILINE | ES_WANTRETURN
+    LTEXT           "注:名称作为ID,不能重复",IDC_STATIC,7,183,84,8
+    PUSHBUTTON      "放弃",IDCANCEL,115,196,50,14
+    PUSHBUTTON      "确定",IDOK,175,196,50,14
+    LTEXT           "根据modbus协议定义，两字节有符号为SHORT，无符号为WORD",IDC_STATIC,7,113,217,8
+    LTEXT           "4字节占两个寄存器地址，要指定高字位置",IDC_STATIC,7,126,158,8
+    CONTROL         "4字节数高字在寄存器低地址",IDC_CHECK_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,62,93,109,10
+END
+
+IDD_DIALOG_COMSET DIALOG  0, 0, 283, 209
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "通信设置"
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "通信方式:",IDC_STATIC,7,9,35,8
+    COMBOBOX        IDC_COMBO_COMTYPE,52,7,54,39,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "读超时:",IDC_STATIC,134,10,27,8
+    EDITTEXT        IDC_EDIT_TIMEOUT,171,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "100-1000毫秒",IDC_STATIC,216,10,48,8
+    LTEXT           "刷新周期:",IDC_STATIC,10,31,35,8
+    EDITTEXT        IDC_EDIT_UPDATE_RATE,52,29,39,14,ES_AUTOHSCROLL
+    LTEXT           "（毫秒）",IDC_STATIC,93,31,31,8
+    CONTROL         "保存调试日志",IDC_CHECK_SAVELOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,31,61,10
+    GROUPBOX        "RS485",IDC_STATIC,7,46,110,132
+    LTEXT           "串  口:",IDC_STATIC,17,64,28,8
+    COMBOBOX        IDC_COMBO_PORT,52,61,54,130,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "波特率:",IDC_STATIC,17,86,27,8
+    COMBOBOX        IDC_COMBO_BT,52,84,54,96,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "校  验:",IDC_STATIC,17,109,28,8
+    COMBOBOX        IDC_COMBO_CK,52,107,54,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "数据位:",IDC_STATIC,18,133,27,8
+    COMBOBOX        IDC_COMBO_DATA,52,130,54,39,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "停止位:",IDC_STATIC,18,154,27,8
+    COMBOBOX        IDC_COMBO_STOP,52,153,54,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "TCP",IDC_STATIC,126,46,151,103
+    LTEXT           "服务IP:",IDC_STATIC,134,63,28,8
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,171,60,93,15
+    LTEXT           "端  口:",IDC_STATIC,134,86,28,8
+    EDITTEXT        IDC_EDIT_TCPPORT,171,82,34,14,ES_AUTOHSCROLL
+    LTEXT           "标准是502",IDC_STATIC,211,85,35,8
+    CONTROL         "通信包中带CRC16",IDC_CHECK_TCPCRC16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,103,73,10
+    LTEXT           "在modbus/tcp中，有些要带crc16两个字",IDC_STATIC,132,119,135,8
+    LTEXT           "比如Honeywell HC900",IDC_STATIC,132,134,76,8
+    GROUPBOX        "",IDC_STATIC,127,150,150,28
+    CONTROL         "RTU模式",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,142,162,43,10
+    CONTROL         "ASCII模式",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,209,162,51,10
+    LTEXT           "注：目前版本先支持RTU模式",IDC_STATIC,15,193,95,8
+    DEFPUSHBUTTON   "确认",IDOK,161,188,50,14
+    PUSHBUTTON      "放弃",IDCANCEL,226,188,50,14
+END
+
+IDD_DIALOG_HELP DIALOG  0, 0, 414, 274
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MODBUS帮助"
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "modbus 2.0 Copyright by 西安热工研究院有限公司",IDC_STATIC,6,10,276,8
+    PUSHBUTTON      "确定",IDOK,357,6,50,14
+    EDITTEXT        IDC_EDIT1,6,27,401,240,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_CFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 547
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 358
+    END
+
+    IDD_DIALOG_ITEMATTR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_DIALOG_COMSET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        VERTGUIDE, 45
+        VERTGUIDE, 52
+        VERTGUIDE, 171
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_DIALOG_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 407
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 267
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_REC          BITMAP                  "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_ITEMATTR DLGINIT
+BEGIN
+    IDC_COMBO_RTYPE, 0x403, 5, 0
+0x4843, 0x5241, "\000" 
+    IDC_COMBO_RTYPE, 0x403, 5, 0
+0x5942, 0x4554, "\000" 
+    IDC_COMBO_RTYPE, 0x403, 6, 0
+0x4853, 0x524f, 0x0054, 
+    IDC_COMBO_RTYPE, 0x403, 5, 0
+0x4f57, 0x4452, "\000" 
+    IDC_COMBO_RTYPE, 0x403, 5, 0
+0x4f4c, 0x474e, "\000" 
+    IDC_COMBO_RTYPE, 0x403, 6, 0
+0x5744, 0x524f, 0x0044, 
+    0
+END
+
+IDD_DIALOG_COMSET DLGINIT
+BEGIN
+    IDC_COMBO_COMTYPE, 0x403, 6, 0
+0x5352, 0x3834, 0x0035, 
+    IDC_COMBO_COMTYPE, 0x403, 4, 0
+0x4354, 0x0050, 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x324d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x334d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x344d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x354d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x364d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x374d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x384d, "\000" 
+    IDC_COMBO_PORT, 0x403, 9, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x394d, "\000" 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0030, 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0031, 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0032, 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0033, 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0034, 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0035, 
+    IDC_COMBO_PORT, 0x403, 10, 0
+0x5c5c, 0x5c2e, 0x4f43, 0x314d, 0x0036, 
+    IDC_COMBO_BT, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_COMBO_BT, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_COMBO_BT, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_COMBO_BT, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO_BT, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_COMBO_BT, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO_BT, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO_BT, 0x403, 6, 0
+0x3635, 0x3037, 0x0030, 
+    IDC_COMBO_BT, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_COMBO_CK, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_COMBO_CK, 0x403, 3, 0
+0xe6c6, "\000" 
+    IDC_COMBO_CK, 0x403, 3, 0
+0xbcc5, "\000" 
+    IDC_COMBO_CK, 0x403, 5, 0
+0x616d, 0x6b72, "\000" 
+    IDC_COMBO_CK, 0x403, 6, 0
+0x7073, 0x6361, 0x0065, 
+    IDC_COMBO_DATA, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_DATA, 0x403, 2, 0
+0x0038, 
+    IDC_COMBO_STOP, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_STOP, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_COMBO_STOP, 0x403, 2, 0
+0x0032, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// CSV
+//
+
+IDR_HELP                CSV                     "res\\modbus.txt"
+IDR_CSV                 CSV                     "res\\testcfg.csv"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_CONFIG              "配置"
+    IDS_NAME                "名称"
+    IDS_DECADDR             "设备地址"
+    IDS_ORDER               "命令"
+    IDS_REGADDR             "寄存器地址"
+    IDS_VALTYPE             "采集值类型"
+    IDS_NOTE                "注释"
+    IDS_SELITEM             "请选择一个数据项!"
+    IDS_ADDITEM             "添加数据项"
+    IDS_EDITITEM            "修改数据项"
+    IDS_NEEDNAME            "请填写名称"
+    IDS_ITEMNAMEERR         "变量名中不能含有 + - * / ( ) < > % ^ 字符!"
+    IDS_NOTSUPORTOD         "目前支持03H,06H,10H命令!"
+    IDS_RENAME              "名称作为ID重复,请重新命名!"
+    IDS_PLSSELMODDEC        "请选择一个modbus设备"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\modbus.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

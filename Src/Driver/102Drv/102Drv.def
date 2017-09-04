@@ -1,0 +1,19 @@
+; 102Drv.def : Declares the module parameters for the DLL.
+
+LIBRARY      "102Drv"
+DESCRIPTION  '102Drv Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	DC_GetDrvInfo
+	DC_Create
+	DC_Destroy
+	DC_Start
+	DC_Stop
+	DC_GetErrMsg
+	DC_GetTagDef
+	DC_GetRunStatus
+	DC_GetConfigSize
+	DC_GetConfigData
+	DC_Config
+	DC_WriteVar

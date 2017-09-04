@@ -1,0 +1,16 @@
+; dbpapi.def : Declares the module parameters for the DLL.
+
+LIBRARY      "TPRICrashWatch"
+
+EXPORTS
+	cwInstall @1 NONAME
+	cwUninstall @2 NONAME
+	cwInstallThread @3 NONAME
+	cwUninstallThread @4 NONAME
+	cwSetErrorMsg @5 NONAME
+	cwGetLastErrorMsg @6 NONAME
+	cwGenerateErrorReport @7 NONAME
+	cwExceptionFilter @8 NONAME
+	cwEmulateCrash @9 NONAME
+	cwSetRestart @10 NONAME
+

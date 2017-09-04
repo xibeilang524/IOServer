@@ -1,0 +1,321 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\opcdrv.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,7,0,0
+ PRODUCTVERSION 2,7,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "OPC客户端驱动"
+            VALUE "FileVersion", "2, 7, 0, 0"
+            VALUE "InternalName", "opcdrv"
+            VALUE "LegalCopyright", "版权所有 (C) 2006"
+            VALUE "OriginalFilename", "opcdrv.DLL"
+            VALUE "PrivateBuild", "20140730"
+            VALUE "ProductName", "OPC客户端驱动"
+            VALUE "ProductVersion", "2, 7, 0, 0"
+            VALUE "SpecialBuild", "20140730"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_OPCSET DIALOGEX 0, 0, 259, 238
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OPC基本配置信息"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "下一步(&N)",IDOK,211,218,41,14
+    PUSHBUTTON      "放弃(&Q)",IDCANCEL,158,218,41,14
+    LTEXT           "本机注册的OPC &Server",IDC_STATIC,7,7,78,8
+    CONTROL         "Tree1",IDC_SERVERLIST,"SysTreeView32",WS_BORDER | WS_TABSTOP,7,18,245,98
+    LTEXT           "OPC服务的&ProgID或CLSID:",IDC_STATIC,7,122,91,8
+    EDITTEXT        IDC_PROGID,7,134,169,14,ES_AUTOHSCROLL
+    LTEXT           "OPC服务器计算机名或IP地址(本机不填):",IDC_STATIC,7,153,137,8
+    EDITTEXT        IDC_MACHINENAME,7,164,124,14,ES_AUTOHSCROLL
+    LTEXT           "刷新周期(&R):",IDC_STATIC,182,122,70,8
+    EDITTEXT        IDC_UPDATERATE,182,134,40,14,ES_AUTOHSCROLL
+    LTEXT           "死区(&D):",IDC_STATIC,182,153,32,8
+    EDITTEXT        IDC_PERCENTDEADBAND,182,164,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,212,245,1,WS_EX_STATICEDGE
+    PUSHBUTTON      "连接",IDC_BUTTON_CONNECT,134,164,31,14
+    LTEXT           "时区:",IDC_STATIC,7,184,20,8
+    EDITTEXT        IDC_EDIT_TIMEAREA,7,194,26,14,ES_AUTOHSCROLL
+    LTEXT           "小时,-12到12,默认为北京东八区(8)",IDC_STATIC,37,196,123,8
+    LTEXT           "数据更新超时(&T):",IDC_STATIC,182,183,62,8
+    EDITTEXT        IDC_EDIT_UPDATE_TIMEOUT,182,194,40,14,ES_AUTOHSCROLL
+    LTEXT           "（秒）",IDC_STATIC,222,198,23,8
+    LTEXT           "（毫秒）",IDC_STATIC,222,138,31,8
+    LTEXT           "（%）",IDC_STATIC,222,167,20,8
+END
+
+IDD_DIALOG_VAR DIALOGEX 0, 0, 545, 359
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OPC数据项"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "标签名(&I):",IDC_STATIC,267,7,41,8
+    EDITTEXT        IDC_ITEMID,317,7,221,14,ES_AUTOHSCROLL
+    LTEXT           "数据类型(&T):",IDC_STATIC,267,26,49,8
+    COMBOBOX        IDC_DATATYPE,320,25,87,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "添加 <<",IDC_ADDONE,497,25,41,14
+    LTEXT           "OPC标签分支过滤(&B):",IDC_STATIC,267,50,77,8
+    CONTROL         "Tree2",IDC_BRANCHLIST,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,267,59,271,69
+    LTEXT           "OPC标签过滤(&L):",IDC_STATIC,267,131,61,8
+    PUSHBUTTON      "<<添加",IDC_ADDSEL,270,340,29,14
+    PUSHBUTTON      ">> 删除",IDC_DEL,7,340,38,14
+    LTEXT           "数据类型(&D)",IDC_STATIC,50,343,45,8
+    COMBOBOX        IDC_DATATYPE_LIST,97,341,56,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "∧修改(&M)",IDC_BUTTON_TYPELIST,160,340,38,14
+    PUSHBUTTON      "保存退出(&S)",IDOK,490,340,48,14
+    PUSHBUTTON      "放 弃",IDCANCEL,440,340,48,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,267,43,271,1,WS_EX_STATICEDGE
+    COMBOBOX        IDC_COMBO_READMODE,303,342,75,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBOLANGUAGE,381,342,48,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "导入",IDC_BUTTON_LOADTXT,7,7,56,14
+    PUSHBUTTON      "导出",IDC_BUTTON_EXPORTTXT,64,7,56,14
+    PUSHBUTTON      "创建例子文件",IDC_BUTTON_EXPORTDEMO,121,7,56,14
+    PUSHBUTTON      "帮助",IDC_BUTTON_HELP,178,7,56,14
+    COMBOBOX        IDC_COMBO_TIME,211,339,48,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "显示OPC标签树的标签列表",IDC_STATIC_LEAFLIST,267,143,271,192,0,WS_EX_CLIENTEDGE
+    LTEXT           "显示当前已经添加的标签列表",IDC_STATIC_ITEMLIST,7,27,255,306,0,WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_HELP DIALOG  0, 0, 453, 290
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "配置帮助"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,401,7,45,14
+    PUSHBUTTON      "放弃",IDCANCEL,401,24,45,14
+    EDITTEXT        IDC_EDIT1,7,7,389,276,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_OPCSET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_DIALOG_VAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 538
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 354
+    END
+
+    IDD_DIALOG_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 446
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COMPONENTS          BITMAP                  "bitmap1.bmp"
+IDB_GROUPIMAGES         BITMAP                  "groupimages.bmp"
+IDB_ITEMIMAGES          BITMAP                  "itemimages.bmp"
+IDB_BITMAP_OPCITEM      BITMAP                  "bmp00001.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_VAR DLGINIT
+BEGIN
+    IDC_DATATYPE, 0x403, 7, 0
+0x6964, 0x7467, 0x6c61, "\000" 
+    IDC_DATATYPE, 0x403, 6, 0
+0x6e69, 0x3374, 0x0032, 
+    IDC_DATATYPE, 0x403, 8, 0
+0x6c66, 0x616f, 0x3374, 0x0032, 
+    IDC_DATATYPE, 0x403, 6, 0
+0x6e69, 0x3674, 0x0034, 
+    IDC_DATATYPE, 0x403, 8, 0
+0x6c66, 0x616f, 0x3674, 0x0034, 
+    IDC_DATATYPE_LIST, 0x403, 5, 0
+0x6f76, 0x6469, "\000" 
+    IDC_DATATYPE_LIST, 0x403, 7, 0
+0x6964, 0x7467, 0x6c61, "\000" 
+    IDC_DATATYPE_LIST, 0x403, 6, 0
+0x6e69, 0x3374, 0x0032, 
+    IDC_DATATYPE_LIST, 0x403, 8, 0
+0x6c66, 0x616f, 0x3374, 0x0032, 
+    IDC_DATATYPE_LIST, 0x403, 6, 0
+0x6e69, 0x3674, 0x0034, 
+    IDC_DATATYPE_LIST, 0x403, 8, 0
+0x6c66, 0x616f, 0x3674, 0x0034, 
+    IDC_DATATYPE_LIST, 0x403, 7, 0
+0x7473, 0x6972, 0x676e, "\000" 
+    IDC_DATATYPE_LIST, 0x403, 5, 0
+0x6c62, 0x626f, "\000" 
+    IDC_COMBO_READMODE, 0x403, 12, 0
+0xaccd, 0xbdb2, 0xc1b6, 0x6143, 0x6863, 0x0065, 
+    IDC_COMBO_READMODE, 0x403, 13, 0
+0xaccd, 0xbdb2, 0xc1b6, 0x6544, 0x6976, 0x6563, "\000" 
+    IDC_COMBO_READMODE, 0x403, 10, 0
+0xecd2, 0xbdb2, 0xc1b6, 0x2e31, 0x0030, 
+    IDC_COMBO_READMODE, 0x403, 10, 0
+0xecd2, 0xbdb2, 0xc1b6, 0x2e32, 0x0030, 
+    IDC_COMBOLANGUAGE, 0x403, 5, 0
+0xa2d3, 0xc4ce, "\000" 
+    IDC_COMBOLANGUAGE, 0x403, 5, 0
+0xd0d6, 0xc4ce, "\000" 
+    IDC_COMBO_TIME, 0x403, 8, 0
+0x504f, 0xca43, 0xb1b1, 0x00ea, 
+    IDC_COMBO_TIME, 0x403, 9, 0
+0xbeb1, 0xd8b5, 0xb1ca, 0xeab1, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// CSV
+//
+
+IDR_CSV1                CSV                     "res\\opchelp.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_OPENFILEERR         "打开文件失败!"
+    IDS_ERRNOFIND           "错误:没有找到"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\opcdrv.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

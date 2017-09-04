@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312"?>
+<license>
+	<software name="RTDBServer" description="实时采集服务">
+		<property category="基本授权" name="Authorized" displayname="授权" datatype="BOOL" default="true" min="" max="" options="" description="是否授权使用本软件" />
+	</software>
+</license>

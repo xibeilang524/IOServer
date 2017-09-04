@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>4.1 线性采集量到工程量转换</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #990000}
+-->
+</style>
+</head>
+
+<body>
+<table border="0" cellpadding="4" width="100%">
+  <tbody>
+    <tr>
+      <td height="16"><h3>4.1 线性采集量到工程量转换</h3></td>
+    </tr>
+    <tr>
+      <td bgcolor="#ff9900" height="6"></td>
+    </tr>
+    <tr>
+      <td height="6"></td>
+    </tr>
+  </tbody>
+</table>
+<p>假定DDClient驱动从热电偶采集到的标签值范围为4-20mA的电流信号量，表示为-10到100℃，并且假定热电偶的电流变化为线性的，那么我们设定：al为电流信号量下限，ah为电流信号上限，cl为温度值下限，ch为温度值上限，x表示当前采集到的电流信号量，而y为当前温度的工程量，则计算公式为：</p>
+<p>y = (x - al) * (ch - cl) / (ah - al) + cl</p>
+<p>即我们在DDClient中的计算公式可以这样编写：</p>
+<p>(<span class="STYLE1">this</span> - 4) * (100 - -10) / (20 - 4) + -10</p>
+<p>简化为：</p>
+<p>(<span class="STYLE1">this</span> - 4) * 6.875 - 10</p>
+<p>&nbsp;</p>
+<hr />
+<p align="center"><a href="http://www.tpri.com.cn">版权所有(C) 2010 西安热工研究院有限公司</a></p>
+</body>
+</html>

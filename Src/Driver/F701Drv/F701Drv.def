@@ -1,0 +1,21 @@
+; F701Drv.def : Declares the module parameters for the DLL.
+
+LIBRARY      "F701Drv"
+DESCRIPTION  'FAGDrv Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	DC_GetDrvInfo
+	DC_Create
+	DC_Destroy
+	DC_Start
+	DC_Stop
+	DC_GetErrMsg
+	DC_GetTagDef
+	DC_GetRunStatus
+	DC_GetConfigSize
+	DC_GetConfigData
+	DC_Config
+	DC_WriteVar
+	DC_SetWriteHistoryCB
+	DC_SetStreamMessageCB

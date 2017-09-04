@@ -1,0 +1,230 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PI_F701Drv.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,8,0,0
+ PRODUCTVERSION 2,8,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "PI实时数据库驱动(规范2.0版)"
+            VALUE "CompanyName", "杨凌升级科技"
+            VALUE "FileDescription", "PI_F701Drv DLL"
+            VALUE "FileVersion", "2, 8, 0, 0"
+            VALUE "InternalName", "PI_F701Drv"
+            VALUE "LegalCopyright", "版权所有 (C) 杨凌升级科技 2015"
+            VALUE "OriginalFilename", "PI_F701Drv.dll"
+            VALUE "PrivateBuild", "20151105"
+            VALUE "ProductName", "PI实时数据库驱动"
+            VALUE "ProductVersion", "2, 8, 0, 0"
+            VALUE "SpecialBuild", "20151105"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CFG DIALOGEX 0, 0, 403, 267
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "驱动配置"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,294,246,50,14
+    PUSHBUTTON      "取消",IDCANCEL,346,246,50,14
+    CONTROL         "",IDC_LIST_PISERVER,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,25,389,74
+    PUSHBUTTON      "添加",IDC_BUTTON_ADD,15,106,50,14
+    PUSHBUTTON      "修改",IDC_BUTTON_EDIT,67,106,50,14
+    PUSHBUTTON      "删除",IDC_BUTTON_DELETE,121,106,50,14
+    PUSHBUTTON      "上移",IDC_BUTTON_UP,173,106,50,14
+    PUSHBUTTON      "下移",IDC_BUTTON_DOWN,227,106,50,14
+    LTEXT           "服务器：",IDC_STATIC,25,177,36,9
+    LTEXT           "服务器端口：",IDC_STATIC,202,175,54,9
+    EDITTEXT        IDC_EDIT_SERVER,69,173,129,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT,264,171,53,15,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "数据库名：",IDC_STATIC,17,198,45,9
+    LTEXT           "用户名：",IDC_STATIC,25,221,36,9
+    LTEXT           "密码：",IDC_STATIC,147,223,29,9
+    EDITTEXT        IDC_EDIT_DATABASE,69,195,129,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,69,217,69,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,195,219,69,15,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "（默认为3306）",IDC_STATIC,317,175,63,9
+    GROUPBOX        "SQL服务器配置",IDC_STATIC,7,155,389,84
+    PUSHBUTTON      "链接测试",IDC_BTN_SQL_TEST,290,218,50,14
+    CONTROL         "写PI数据库",IDC_CHK_PI_SERVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,10,56,10
+    CONTROL         "写SQL数据库",IDC_CHK_SQL_SERVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,136,60,10
+    LTEXT           "表名：",IDC_STATIC,207,197,28,9
+    EDITTEXT        IDC_EDIT_TABLE,235,195,129,15,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_PISERVER_ITEM DIALOGEX 0, 0, 252, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PI服务器配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,133,137,50,14
+    PUSHBUTTON      "取消",IDCANCEL,195,137,50,14
+    LTEXT           "服务器或IP地址",IDC_STATIC,32,18,61,9,0,WS_EX_RIGHT
+    LTEXT           "连接超时",IDC_STATIC,38,83,55,9,0,WS_EX_RIGHT
+    LTEXT           "服务端口号",IDC_STATIC,41,36,52,9,0,WS_EX_RIGHT
+    LTEXT           "登录用户名",IDC_STATIC,44,51,49,10,0,WS_EX_RIGHT
+    LTEXT           "数据访问超时",IDC_STATIC,35,101,58,12,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_SERVERNAME,101,17,118,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONNTIMEOUT,101,81,68,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DATIMEOUT,101,99,68,13,ES_AUTOHSCROLL
+    LTEXT           "（秒）",IDC_STATIC,180,84,38,9
+    LTEXT           "（秒）",IDC_STATIC,180,102,38,9
+    RTEXT           "登录密码",IDC_STATIC,43,68,50,9
+    EDITTEXT        IDC_EDIT_PASSWARD,101,65,118,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USERNAME,101,48,118,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORTNUM,101,33,118,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "测试连接",IDC_BUTTON_TEST,7,138,50,13
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,126,251,1
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_CFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 396
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_DIALOG_PISERVER_ITEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\PI_F701Drv.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
